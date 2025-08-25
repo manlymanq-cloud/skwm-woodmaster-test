@@ -117,19 +117,17 @@ button,
 
 button:hover,
 .btn:hover {
-  background-color: var(--color-accent);
-}
 /* =========================
    HERO SECTION
    ========================= */
 .hero {
-  background: url("../img/hero-bg.jpg") center/cover no-repeat;
+  background: url("assets/img/hero-bg.jpg") center/cover no-repeat;
   padding: 100px 0;
   text-align: center;
   color: var(--color-muted);
 }
 
-.hero h1 {
+.hero-title {
   font-size: var(--fs-h1);
   line-height: var(--lh-h1);
   font-weight: var(--fw-h1);
@@ -176,7 +174,7 @@ button:hover,
     padding: 60px 0;
   }
 
-  .hero h1 {
+  .hero-title {
     font-size: calc(var(--fs-h1) * 0.5);
     line-height: calc(var(--lh-h1) * 0.5);
   }
@@ -184,15 +182,4 @@ button:hover,
   .hero-subtitle {
     font-size: var(--fs-body);
   }
-}
-
-
-/* Ссылки */
-a {
-  color: var(--color-primary);
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
 }
