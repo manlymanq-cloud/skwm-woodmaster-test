@@ -81,3 +81,95 @@ h3 {
   --fs-body: 16px; --lh-body: 1.6; --fw-body: 400;
 
   /* С
+  /* Базовая сетка */
+:root {
+  --bg: #0f0f0f;
+  --text: #f4f4f4;
+  --muted: #c8c8c8;
+  --brand: #c78a3b; /* тёплый деревянный акцент */
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  background: #111;
+}
+
+.container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  min-height: 80svh;
+  display: grid;
+  align-items: center;
+  padding: 72px 0;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.75)),
+    url("../img/hero.jpg") center/cover no-repeat; /* замени путь/файл при необходимости */
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.hero h1 {
+  margin: 0 0 12px;
+  font-size: clamp(32px, 6vw, 56px);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+}
+
+.hero p {
+  margin: 0 0 28px;
+  font-size: clamp(16px, 2.4vw, 20px);
+  color: var(--muted);
+  max-width: 680px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* Кнопки */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform .15s ease, background-color .2s ease, color .2s ease, box-shadow .2s ease;
+  will-change: transform;
+}
+
+.btn-primary {
+  background: var(--brand);
+  color: #1b1b1b;
+  box-shadow: 0 6px 20px rgba(199,138,59,.25);
+}
+.btn-primary:hover { transform: translateY(-1px); }
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid rgba(255,255,255,0.22);
+  backdrop-filter: blur(2px);
+}
+.btn-ghost:hover { transform: translateY(-1px); }
+
+/* Секции‑заглушки ниже, чтобы было куда скроллить */
+.section {
+  padding: 80px 0;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.section h2 {
+  margin: 0 0 6px;
+  font-size: clamp(24px, 4vw, 36px);
+}
